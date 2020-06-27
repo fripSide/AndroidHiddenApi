@@ -24,7 +24,7 @@ def OdexAndOat2Smali():
 def Smali2Dex():
     for dirpath, dirnames, filenames in os.walk(smali_directory):
         for dir in dirnames:
-            if dir.startswith('25_'):
+            if dir.startswith('26_'):
                 filepath = dirpath + os.sep + dir + "\\"
                 subprocess.check_call(["java", "-jar", "D:\\AndroidApiExtract\\smali-2.2.7.jar", "ass", "-a", api, filepath, "-o", dir+".dex"], shell=True)
                 print(filepath)
